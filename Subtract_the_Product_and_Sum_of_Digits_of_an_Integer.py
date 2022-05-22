@@ -1,0 +1,10 @@
+n=int(input())
+sum=0
+p=1
+while(n!=0):
+    r=n%10
+    sum+=r
+    p*=r
+    n//=10
+pe=p-sum
+print(pe)
