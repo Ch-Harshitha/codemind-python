@@ -1,25 +1,25 @@
-def prime(a):
+def isprime(j):
     i=2
     v=0
-    while i!=a:
-        if(a%i)==0:
+    while i!=j:
+        if j%i==0:
             v=1
         i+=1
-    if(v==0):
-        return a
+    if v==0:
+        return j
 x=int(input())
 for i in range(x):
     y=int(input())
-    b=y
+    a=y
     for j in range(y,2-1,-1):
-        if prime(j):
+        if isprime(j):
             n=j
             break
-    while(b!=0):
-        if prime(b):
-            m=b
+    while a!=0:
+        if isprime(a):
+            m=a
             break
-        b+=1
+        a+=1
     if(y-n)<(m-y):
         print(n)
     elif(y-n)==(m-y):
