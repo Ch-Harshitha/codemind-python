@@ -1,19 +1,19 @@
 def count(n):
-    c=0
+    l=0
     while(n!=0):
+        l+=1
         n//=10
-        c+=1
-    return c
-n=int(input())
+    return l
+t=int(input())
+n=t
+len=count(n)
 sum=0
-t=n
-c=count(n)
-while(t!=0):
-    r=t%10
-    sum=sum+r**c
-    t//=10
-    c-=1
-if(sum==n):
+while(n!=0):
+    r=n%10
+    sum=sum+r**len
+    n//=10
+    len-=1
+if(t==sum):
     print('True')
 else:
     print('False')
